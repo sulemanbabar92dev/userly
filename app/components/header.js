@@ -12,9 +12,9 @@ export default function Header({ toggleSidebar, isOpen }) {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <header className=" flex items-center justify-between  px-3 py-1 shadow-sm bg-white z-50">
+      <header className=" flex items-center justify-between  px-3 py-1 shadow-sm bg-white z-50 ">
         <button
-          className="rounded-full hover:bg-gray-100 transition-colors duration-200"
+          className="rounded-full hover:bg-gray-100 transition-colors duration-200 "
         >{
             isOpen ?
               <RiMenuUnfold4Line onClick={toggleSidebar} className="text-2xl hover:text-black" />
@@ -23,7 +23,7 @@ export default function Header({ toggleSidebar, isOpen }) {
 
           }
         </button>
-        <div className="flex items-center gap-4 ">
+        <div className="flex items-center gap-4  ">
           <button
             className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
             aria-label="Search"
