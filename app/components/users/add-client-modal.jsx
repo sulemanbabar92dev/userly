@@ -15,7 +15,7 @@ const AddClientModal = ({openModal,setOpenModal,setUsers}) => {
   const validate = () => {
     const newErrors = {}
     if(!formData.fullName.trim())newErrors.fullName="Fullname is required"
-    if(!formData.userName.trim())newErrors.username="Username is required"
+    if(!formData.userName.trim())newErrors.userName="Username is required"
     if(!formData.email.trim())newErrors.email="Email is required"
     else if(!/\S+@\S+\.\S+/.test(formData.email))newErrors.email="Email is invalid"
     if(!formData.phone.trim())newErrors.phone="Phone is required"
@@ -103,8 +103,8 @@ const AddClientModal = ({openModal,setOpenModal,setUsers}) => {
            placeholder="Enter your email"
            value={formData.email}
            onChange={(event)=>{setFormData({...formData,email:event.target.value})
-            if(errors.fullName){
-            setErrors(prev=>({...prev,fullName:""}))
+            if(errors.email){
+            setErrors(prev=>({...prev,email:""}))
           }
           }} />
            {errors.email && <ErrorMessage errors={errors.email}/>}
@@ -117,8 +117,8 @@ const AddClientModal = ({openModal,setOpenModal,setUsers}) => {
            placeholder="Enter your number"
              value={formData.phone}
            onChange={(event)=>{setFormData({...formData,phone:event.target.value})
-            if(errors.fullName){
-            setErrors(prev=>({...prev,fullName:""}))
+            if(errors.phone){
+            setErrors(prev=>({...prev,phone:""}))
           }
           }}
            />
@@ -132,8 +132,8 @@ const AddClientModal = ({openModal,setOpenModal,setUsers}) => {
            placeholder="Enter your password"
             value={formData.password}
            onChange={(event)=>{setFormData({...formData,password:event.target.value})
-             if(errors.fullName){
-            setErrors(prev=>({...prev,fullName:""}))
+             if(errors.password){
+            setErrors(prev=>({...prev,password:""}))
           }
           }}
            />
@@ -147,8 +147,8 @@ const AddClientModal = ({openModal,setOpenModal,setUsers}) => {
           placeholder="Confirm your password" 
            value={formData.confirmPassword}
            onChange={(event)=>{setFormData({...formData,confirmPassword:event.target.value})
-             if(errors.fullName){
-            setErrors(prev=>({...prev,fullName:""}))
+             if(errors.confirmPassword){
+            setErrors(prev=>({...prev,confirmPassword:""}))
           }
           }}
            />
@@ -165,8 +165,7 @@ const AddClientModal = ({openModal,setOpenModal,setUsers}) => {
   )
 }
 export default AddClientModal
-
-const ErrorMessage=(errors)=>{
+const ErrorMessage=({errors})=>{
   return(
     <p className='text-red-500'>{errors}</p>
   )
