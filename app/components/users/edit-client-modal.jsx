@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Modal from '../ui/Modal'
 
-const EditClientModal = ({editClient,setEditClient,user,onUpdatedUser}) => {
+const EditClientModal = ({editClient,setEditClient,user,onUserUpdated}) => {
 
    const [formData,setFormData] = useState({
       id: '',
@@ -43,7 +43,7 @@ const EditClientModal = ({editClient,setEditClient,user,onUpdatedUser}) => {
     )
     localStorage.setItem('users', JSON.stringify(updatedUsers))
 
-    if (onUpdatedUser) onUpdatedUser(updatedUser)
+    if (onUserUpdated) onUserUpdated(updatedUser)
     setEditClient(false)
   }
   return (
