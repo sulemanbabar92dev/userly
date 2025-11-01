@@ -1,22 +1,19 @@
 'use client'
 import React, { useState,useEffect   } from 'react'
-import Link from 'next/link'
-import Modal from '@/components/ui/Modal'
 import AddClientModal from '@/components/users/add-client-modal'
 import EditClientModal from '@/components/users/edit-client-modal'
 import DeleteClientModal from '@/components/users/delete-client-modal'
 import ClientTable from '@/components/users/client-table'
 
 const Page = () => {
+
   const [users, setUsers] = useState([])
   const[openModal,setOpenModal]=useState(false)
     const[editClient,setEditClient]=useState(false)
     const[deleteClient,setDeleteClient]=useState(false)
     const[clientToDelete,setClientToDelete]=useState(null)
     const[selectedClients,setSelectedClients]=useState(null)
-
-   const usersData = JSON.parse(localStorage.getItem('users'));
-
+  //  const usersData = JSON.parse(localStorage.getItem('users'));
      useEffect(() => {
       const saved = JSON.parse(localStorage.getItem('users')) || []
       setUsers(saved)
