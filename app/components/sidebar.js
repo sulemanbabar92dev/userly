@@ -41,7 +41,6 @@ export default function Sidebar({ isOpen, setBreadcrumbsData }) {
           ))}
         </div>
       </div>
-
     </div>
   )
 }

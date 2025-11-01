@@ -1,6 +1,5 @@
 'use client'
 import React, { useContext, useState,useEffect } from 'react'
-import Modal from "@/components/ui/Modal";
 import AddProductModal from '@/components/users/add-product-modal';
 import EditProductModal from '@/components/users/edit-product-modal';
 import DeleteProductModal from '@/components/users/delete-product-modal';
@@ -14,7 +13,6 @@ const Page = () => {
   const [productToDelete, setProductToDelete] = useState(null) 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-   const usersData = JSON.parse(localStorage.getItem('users'));
 
 
     useEffect(() => {
