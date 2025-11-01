@@ -22,7 +22,7 @@ export default function Sidebar({ isOpen, setBreadcrumbsData }) {
           {isOpen &&
             <h1 className='flex items-center gap-3 bg-white p-2 rounded-sm text-[#A80080] text-[22px] font-bold my-[15px] '>
               <FaUserFriends />
-              Userly</h1>
+              Userly App</h1>
           }
           {links.map((link) => (
             <Link key={link.path} href={link.path} onClick={() => setBreadcrumbsData(link.label)} >
