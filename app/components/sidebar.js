@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaUser, FaUserFriends, FaBox } from "react-icons/fa";
 
 export default function Sidebar({ isOpen, setBreadcrumbsData }) {
-  // path instance
+  
   const pathname = usePathname();
 
   const links = [
