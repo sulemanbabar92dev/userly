@@ -13,10 +13,6 @@ const Page = () => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [userToDelete, setUserToDelete] = useState(null);
 
-  // get users from local storage
-  const usersData = JSON.parse(localStorage.getItem('users'));
-  // localStorage.setItem("users",JSON.stringify(usersData,newUser))
-
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem('users')) || []
     setUsers(saved)
