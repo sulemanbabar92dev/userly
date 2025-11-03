@@ -14,12 +14,17 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
 
   return (
     <div>
-      {isOpen && (
         <div
-          className={`absolute z-10 transition-all  block md:hidden duration-500 ease-in-out  px-3  h-full bg-[#800080] text-white`}
-        >
+      className={`
+        fixed top-0 left-0 z-10 h-full w-[200px] 
+        bg-[#800080] text-white px-3
+        transform transition-transform duration-700 ease-in-out
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
+        md:hidden
+      `}
+    >
           <div
-            className={`pl-5 pt-3 transition-all duration-500 ease-in-out  px-3  h-full bg-[#800080] text-white box-border flex flex-wrap flex-col`}
+            className="pl-5 pt-3 transition-all duration-500 ease-in-out  px-3  h-full bg-[#800080] text-white box-border flex flex-wrap flex-col"
           >
             <div className="flex items-center justify-between">
               <h1 className="flex items-center gap-3 bg-white p-2 rounded-sm text-[#A80080] text-[22px] font-bold my-[15px] ">
@@ -44,9 +49,10 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
                 onClick={() => setBreadcrumbsData(link.label)}
               >
                 <div
-                  className={`flex items-center py-3 gap-3 rounded-[6px] cursor-pointer pl-3 text-[16px] mb-[15px]  transition-colors duration-300 ease-in-out ${
+                  className={`inline-flex items-center py-3 gap-3 rounded-[6px] cursor-pointer pl-3 text-[16px] mb-[15px]   transition-colors duration-300 ease-in-out 
+                    ${
                     isActive(link.path)
-                      ? "bg-white text-[#A80080]"
+                      ? "bg-white text-[#A80080] "
                       : " hover:bg-white hover:text-[#A80080]"
                   }`}
                 >
@@ -57,7 +63,7 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
             ))}
           </div>
         </div>
-      )}
+      
     </div>
   );
 };
