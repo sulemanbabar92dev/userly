@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaUserFriends } from "react-icons/fa";
 import { RiMenuFoldFill } from "react-icons/ri";
-// import { RiMenuUnfold4Line, RiMenuUnfoldLine } from "react-icons/ri";
 const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
   const pathname = usePathname();
 
@@ -27,8 +26,8 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
             className="pl-5 pt-3 transition-all duration-500 ease-in-out  px-3  h-full bg-[#800080] text-white box-border flex flex-wrap flex-col"
           >
             <div className="flex items-center justify-between">
-              <h1 className="flex items-center gap-3 bg-white p-2 rounded-sm text-[#A80080] text-[22px] font-bold my-[15px] ">
-                <FaUserFriends />
+              <h1 className="flex items-center gap-3 bg-white p-2 rounded-sm text-[#A80080] text-[18px] font-bold my-[15px] ">
+                <FaUserFriends className="text-[25px]" />
                 Userly App
               </h1>
 
@@ -49,7 +48,7 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
                 onClick={() => setBreadcrumbsData(link.label)}
               >
                 <div
-                  className={`inline-flex items-center py-3 gap-3 rounded-[6px] cursor-pointer pl-3 text-[16px] mb-[15px]   transition-colors duration-300 ease-in-out 
+                  className={`inline-flex items-center py-3 gap-3 rounded-[6px] cursor-pointer pl-2 text-[16px] mb-[15px]   transition-colors duration-300 ease-in-out 
                     ${
                     isActive(link.path)
                       ? "bg-white text-[#A80080] "
