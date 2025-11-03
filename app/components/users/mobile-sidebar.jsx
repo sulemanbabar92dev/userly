@@ -27,7 +27,7 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
             <div className="flex items-center justify-between">
               <h1 className="flex items-center gap-3 bg-white p-2 rounded-sm text-[#A80080] text-[12px] font-bold my-[15px] ">
                 <FaUserFriends className="text-[25px]" />
-                Userly App
+                Userly 
               </h1>
 
               {/* close button */}
