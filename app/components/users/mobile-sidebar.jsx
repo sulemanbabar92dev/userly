@@ -30,22 +30,15 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
                 <FaUserFriends className="text-[25px]" />
                 Userly App
               </h1>
-
-              {/* close button */}
-              <div
-                onClick={toggleSidebar}
-                className="text-end text-white text-lg  font-bold p-5 "
-              >
-                {" "}
-                <RiMenuFoldFill className="text-2xl " />{" "}
-              </div>
             </div>
-
             {links.map((link) => (
               <Link
                 key={link.path}
                 href={link.path}
-                onClick={() => setBreadcrumbsData(link.label)}
+                onClick={() => {
+                  setBreadcrumbsData(link.label);
+                toggleSidebar()
+              }} 
               >
                 <div
                   className={`inline-flex items-center py-3 gap-3 rounded-[6px] cursor-pointer pl-2 text-[16px] mb-[15px]   transition-colors duration-300 ease-in-out 
@@ -62,7 +55,6 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
             ))}
           </div>
         </div>
-      
     </div>
   );
 };
