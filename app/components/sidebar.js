@@ -21,7 +21,7 @@ export default function Sidebar({ isOpen, setBreadcrumbsData }) {
           {isOpen && (
             <h1 className="flex items-center gap-3 bg-white p-2 rounded-sm text-[#A80080] text-[22px] font-bold my-[15px] ">
               <FaUserFriends />
-              Userly App
+              Userly
             </h1>
           )}
           {links.map((link) => (
