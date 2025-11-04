@@ -43,7 +43,6 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
                 key={link.path}
                 href={link.path}
                 onClick={() => setBreadcrumbsData(link.label)
-                  // toggleSidebar()
                 }
               >
                 <div
