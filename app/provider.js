@@ -35,9 +35,7 @@ const AppProvider = ({ children }) => {
           {children}
         </div>
       </div>
-      <div className="bg-gray-400 text-white h-[50px] flex justify-center items-center ">
-        <h1>@copyright</h1>
-      </div>
+    
     </BreadcrumbsProvider>
   );
 };

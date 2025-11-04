@@ -14,7 +14,7 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
     <div>
         <div
       className={`
-        fixed top-0 left-0 z-10 h-full w-[140px] 
+        fixed top-0 left-0 z-10 h-full w-[170px] 
         bg-[#800080] text-white px-3
         transform transition-transform duration-700 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
@@ -31,22 +31,22 @@ const MobileSidebar = ({ setBreadcrumbsData, toggleSidebar, isOpen }) => {
               </h1>
 
               {/* close button */}
-              {/* <div
+              <div
                 onClick={toggleSidebar}
                 className="text-end text-white text-lg  font-bold p-5 "
               >
                 {" "}
                 <RiMenuFoldFill className="text-2xl " />{" "}
-              </div> */}
+              </div>
             </div>
 
             {links.map((link) => (
               <Link
                 key={link.path}
                 href={link.path}
-                onClick={() => {setBreadcrumbsData(link.label)
-                  toggleSidebar()
-                }}
+                onClick={() => setBreadcrumbsData(link.label)
+                  // toggleSidebar()
+                }
               >
                 <div
                   className={`flex items-center py-3 gap-3 rounded-[6px] cursor-pointer pl-2 text-[16px] mb-[15px]   transition-colors duration-300 ease-in-out 
