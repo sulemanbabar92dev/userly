@@ -14,7 +14,6 @@ const Page = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
 
-
     useEffect(() => {
        const saved = JSON.parse(localStorage.getItem('users')) || []
        setUsers(saved)
