@@ -33,8 +33,8 @@ const TableProduct = ({users, onDelete, onEdit}) => {
                 <td className="px-4 py-2">{user.phone}</td>
                 <td className="px-4 py-2">{user.password}</td>
                 <td className="flex px-4 py-5 gap-3">
-                <RiDeleteBin5Line onClick={() =>onDelete(user)} className='text-red-500 text-[20px] hover:text-red-700' />
                  <MdEdit onClick={() => onEdit(user)}  className='text-black text-[20px] hover:text-gray-700' />
+                <RiDeleteBin5Line onClick={() =>onDelete(user)} className='text-red-500 text-[20px] hover:text-red-700' />
                 </td>
               </tr>
             ))
