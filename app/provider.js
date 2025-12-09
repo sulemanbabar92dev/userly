@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
           setBreadcrumbsData={setBreadcrumbsData}
           toggleSidebar={toggleSidebar}
           isOpen={isSidebarOpen}
-        />
+        />  
         <Sidebar
           isOpen={isSidebarOpen}
           setBreadcrumbsData={setBreadcrumbsData}

@@ -17,7 +17,7 @@ const AddUserModal = ({ modalOpen, setModalOpen,setUsers }) => {
         if (!formData.email.trim()) newErrors.email = "Email is required"
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Email is invalid"
         // if (!formData.phone.trim()) newErrors.phone = "Phone is required"
-        if (!/^\d{13}$/.test(formData.phone)) newErrors.phone = "Phone must be 13 digits";
+        if (!/^\d{13}$/.test(formData.phone)) newErrors.phone = "Phone must be 12 digits";
         if (!formData.password) newErrors.password = "Password is required"
         if (!formData.confirmPassword){newErrors.confirmPassword="ConfirmPassword is required"}
         else if (formData.password !== formData.confirmPassword){ newErrors.confirmPassword = "Password  does not match"}  
@@ -174,6 +174,7 @@ const AddUserModal = ({ modalOpen, setModalOpen,setUsers }) => {
     )
 }
 export default AddUserModal
+
 const ErrorMessage = ({ errors }) => {
     return (
         <p className='text-red-500'>{errors}</p>
